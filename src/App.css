@@ -1,38 +1,124 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&display=swap');
+
+.app{
+  
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.hero{
+    background: linear-gradient(to bottom, #1b191a60, hsla(27, 37%, 30%, 0.103));
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 98%, 0 74%);
+}
+
+
+.nav_members{
+  cursor: pointer;
+  color: black;
+  font-size: 1.6 rem;
+  font-family: 'Times New Roman', Times, serif ;
+}
+
+.pic{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.brand_name{
+  font-family: "Cinzel";
+  font-size: 2rem;
+  
+}
+
+.hero{
+  padding-inline: 90px;
+}
+
+.hero_2{
+  padding-top: 60px;
+
+}
+.personal{
+  padding-top: 52px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.I_text{
+  font-family: Playfair Display;
+  color:rgba(94, 51, 155, 0.559);
+  font-weight: 500;
+  font-size: 2.4 rem;
+}
+.name{
+  color: yellowgreen;
+  font-size: 20px; 
+  font-family: rye;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.adjective{
+  font-family: sans-serif;
+  color: #830f0f84;
+  font-size:2.5rem;
+}
+
+.overview{
+   font-family: sans-serif;
+   color: rgba(94, 51, 155, 0.559);
+   font-size: 1.4rem;
+}
+
+
+.btn_1,  .btn_2{
+  font-size: 1.3 rem;
+  font-family: Playfair Display;
+  background-color: rgb(179, 115, 32);
+  color:white;
+  border-radius: 25px;
+  margin-inline: 12px;
+  padding: 5px 40px;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  animation: Anim 1s ease-in-out infinite;
+}
+
+.btn_2:hover, 
+.btn_1:hover{
+  transform: translateY(-5px);
+  background-color: var(standout-color);
+  background-color: rgb(230, 161, 71);
+}
+
+@keyframes Anim{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pic{
+  width: 300 px;
+  border-radius: 50%;
+  object-fit: contain;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 12px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
