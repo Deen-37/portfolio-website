@@ -25,10 +25,10 @@ function App() {
             </span>
             <span className='adjective py-2'>Enthusiastic Dev 😎</span>
             <span className='overview'>passionate about building front and back-end operations </span>
-            <dev className= "btns d-flex flex-row justify-content-center mt-5">
+            <div className= "btns d-flex flex-row justify-content-center mt-5">
               <button className='btn_1'> Hire Me </button>
               <button className='btn_2'> Resume </button>
-            </dev>
+            </div>
           </div>
         </div>
         <div className='picture col-lg-5 col-md-6 col-sm-12'>
@@ -37,6 +37,20 @@ function App() {
           </div>
         </div>
       </div>
+
+      <section id="about" className="about-me-section aboutme-inside my-5">
+        <div className='d-flex flex-column'>
+          <span className='about-me-text'> About me</span>
+          <span className='why-text-sub'>Why Choose me?</span>
+          <div className='row justify-content-center  shadow-lg my-5'>
+            <div className='col-lg-6 col-md-6'>
+              
+            </div>
+          
+          </div>  
+        </div>
+      </section>
+
     </div>
   );
 }
