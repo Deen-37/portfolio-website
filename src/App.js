@@ -55,22 +55,30 @@ function App() {
             </div>
             <div className='col-lg06 col-md-6 col-sm-12 py-5 d-flex flex-column'>
               <span className='some-text-about-me'>
-                Passionate and detail-oriented <strong>Computer Science student</strong> with hands-on experience in 
-                <strong>web development</strong>, <strong>AI integration</strong>, and <strong>data analysis</strong>. 
-                Skilled in designing responsive, user-friendly applications using <strong>HTML, CSS, JavaScript</strong>, 
-                and modern frameworks like <strong>React</strong> and <strong>Vite</strong>. Experienced in building 
-                intelligent chatbots and NLP pipelines leveraging <strong>LLMs</strong>, <strong>TextBlob</strong>, 
-                and <strong>Python</strong> libraries to extract insights and automate analysis.
+                Full Stack Web Developer with hands-on experience in designing and building responsive, user-focused web applications. 
+                I specialize in creating scalable front-end interfaces and efficient back-end systems, with a strong emphasis on 
+                clean code, performance, and user experience.
               </span>
-              <span className='few-highlights mt-4 fw-bold'>Here are a few highlights:</span>
+
+              <span className='few-highlights mt-4 fw-bold'>Technical Summary:</span>
 
               <ul className='few-list mt-2'>
-                <li>💻 Built responsive e-commerce website using HTML, CSS, and JavaScript</li>
-                <li>🤖 Developed AI chatbot with LLM (Ollama) and regex-based parsing</li>
-                <li>📊 Created NLP pipeline with 85%+ sentiment accuracy using TextBlob and pandas</li>
-                <li>🧠 Experienced with MERN stack, REST APIs, and modern front-end frameworks</li>
-                <li>🚀 Strong foundation in software engineering, testing, and problem-solving</li>
-                <li>🛠️ Tool</li>
+                <li><strong>Front-End:</strong> HTML, CSS, JavaScript, TypeScript, React, Angular, Bootstrap, Vite</li>
+                <li><strong>Back-End:</strong> Node.js, Express.js, Mulesoft</li>
+                <li><strong>Databases:</strong> MongoDB, MySQL, SQL Server</li>
+                
+                <li><strong>APIs & Integration:</strong> REST API design, Postman testing, JSON handling</li>
+                <li><strong>Tools & Platforms:</strong> Git, GitHub, Docker, VS Code, IntelliJ, Ollama</li>
+                <li><strong>Programming Languages:</strong> Python, Java, C++, SQL</li>
+                <li><strong>Additional Libraries:</strong> TextBlob, pandas (for NLP and data analysis)</li>
+              </ul>
+
+              <span className='few-highlights mt-4 fw-bold'>Key Strengths:</span>
+              <ul className='few-list mt-2'>
+                <li>Building full-stack web apps using MERN stack and modern frameworks</li>
+                <li>Designing responsive, user-friendly front-end layouts</li>
+                <li>Developing and testing RESTful APIs</li>
+                <li>Writing maintainable, modular, and optimized code</li>
               </ul>
             </div>
           </div>  
