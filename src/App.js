@@ -38,18 +38,44 @@ function App() {
         </div>
       </div>
 
-      <section id="about" className="about-me-section aboutme-inside my-5">
+      <div id="about" className="about-me-section aboutme-inside my-5">
         <div className='d-flex flex-column'>
           <span className='about-me-text'> About me</span>
           <span className='why-text-sub'>Why Choose me?</span>
-          <div className='row justify-content-center  shadow-lg my-5'>
-            <div className='col-lg-6 col-md-6'>
-              
+          <div className='row justify-content-center shadow-lg my-5'>
+            <div className='col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-center'>
+              <lottie-player 
+                src="https://assets7.lottiefiles.com/packages/lf20_v1yudlrx.json" 
+                background="transparent" 
+                speed="1" 
+                style= {{width:"500px", height: "500px"}}
+                loop 
+                autoplay>
+              </lottie-player>
             </div>
-          
+            <div className='col-lg06 col-md-6 col-sm-12 py-5 d-flex flex-column'>
+              <span className='some-text-about-me'>
+                Passionate and detail-oriented <strong>Computer Science student</strong> with hands-on experience in 
+                <strong>web development</strong>, <strong>AI integration</strong>, and <strong>data analysis</strong>. 
+                Skilled in designing responsive, user-friendly applications using <strong>HTML, CSS, JavaScript</strong>, 
+                and modern frameworks like <strong>React</strong> and <strong>Vite</strong>. Experienced in building 
+                intelligent chatbots and NLP pipelines leveraging <strong>LLMs</strong>, <strong>TextBlob</strong>, 
+                and <strong>Python</strong> libraries to extract insights and automate analysis.
+              </span>
+              <span className='few-highlights mt-4 fw-bold'>Here are a few highlights:</span>
+
+              <ul className='few-list mt-2'>
+                <li>💻 Built responsive e-commerce website using HTML, CSS, and JavaScript</li>
+                <li>🤖 Developed AI chatbot with LLM (Ollama) and regex-based parsing</li>
+                <li>📊 Created NLP pipeline with 85%+ sentiment accuracy using TextBlob and pandas</li>
+                <li>🧠 Experienced with MERN stack, REST APIs, and modern front-end frameworks</li>
+                <li>🚀 Strong foundation in software engineering, testing, and problem-solving</li>
+                <li>🛠️ Tool</li>
+              </ul>
+            </div>
           </div>  
         </div>
-      </section>
+      </div>
 
     </div>
   );
