@@ -1,8 +1,24 @@
 
+import { useState } from 'react';
 import './App.css';
-
+import Externship from './Externship.js';
+import Project from './Project.js';
+import Educ from './Educ.js'
+import Contact from './contact.js';
 
 function App() {
+  const [educ, seteduc] = useState(true);
+  const[project, setproject] = useState(false);
+  const[externship, setexternship] = useState(false);
+  function SetAllFalse(){
+    seteduc(false)
+    setproject(false)
+    setexternship(false)
+  }
+  function changeState(function1, state1){
+    SetAllFalse();
+    function1(state1);
+  }
   return (
     <div className='app'>
       <div className="hero px-5 py-5">
@@ -82,6 +98,71 @@ function App() {
               </ul>
             </div>
           </div>  
+        </div>
+      </div>
+      <div className='resume-outer-section d-flex flex-column'>
+        <span className= "about-me-text">Resume</span>
+        <span className='why-text-sub'> My Detail</span>
+
+        <div className='resume-new-section row shadow-lg inside my-3' style={{width: '70%', marginInline: "auto", height: "400px"}}
+          >
+          <div className='col-lg-4 col-md-4 resume-left-section d-flex flex-row'>
+            <div className='d-flex flex-column bg-new text-white'>
+                <span className='icons-span'>
+                  <i class="fa-solid fa-user-graduate"></i>
+                </span>
+                <span class='icons-span'>
+                  <i class="fa-solid fa-code-branch"></i>
+                </span>
+                <span class='icons-span'>
+                  <i class="fa-solid fa-globe"></i>
+                </span>
+            </div>
+            <div className='d-flex flex-column'>
+              <span
+                className={educ === false? "resume-options-items": "selected resume-options-items"}
+                onClick={() => {
+                  changeState(seteduc, true)
+                }}
+              >
+                Education
+              </span>
+
+              <span
+                className={project === false? "resume-options-items": "selected resume-options-items"}
+                onClick={() => {
+                  changeState(setproject, true)
+                }}
+              >
+                Project
+              </span>
+
+              <span
+                className={externship === false? "resume-options-items": "selected resume-options-items"}
+                onClick={() => {
+                  changeState(setexternship, true);
+                }}
+              >
+                Externship
+              </span>
+
+            </div>
+          </div>
+          <div className='col-lg-8 col-md-8 resume-right-section'>
+            {educ === true && <Educ />}
+            {project == true && <Project/>}
+            {externship == true && <Externship/>}
+          </div>
+          
+        </div>
+      </div>
+      <div className='contact-me'>
+        <div className='relative-bg'>
+          <div className='contact-inner-part d-flex flex-column'>
+            <span className='about-me-text'>Contact me</span>
+            <span className='why-text-sub mb-5'> Let's Keep in touch</span>
+            <Contact/>
+          </div>
         </div>
       </div>
 

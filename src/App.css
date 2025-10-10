@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&display=swap');
 
 .app{
-
-  
+  background-color: #e3f2fd;
 }
 *{
   padding: 0;
@@ -10,7 +9,7 @@
 }
 
 .hero{
-    background: linear-gradient(to bottom, #1b191a60, hsla(27, 37%, 30%, 0.103));
+    background: linear-gradient(to bottom, #14b7bdd3, hsla(27, 37%, 30%, 0.103));
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 98%, 0 74%);
 }
 
@@ -141,6 +140,83 @@
   width:70%;
   margin-inline: auto;
 }
+
+
+/* resume css*/
+
+.resume-options-items{
+  width:100%;
+  transition: all 0.3s ease-in-out;
+  padding-block: 24px;
+  padding-inline:24px;
+  color:#000000;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  
+}
+
+.resume-options-items:hover{
+  width: 100%;
+  background-color: #8abee3;
+  color:white;
+
+}
+
+.icons-span{
+  margin-inline:24px;
+  margin-block: 24px;
+ 
+}
+.resume-left-section
+{
+  margin-left: 0px;
+}
+
+.selected{
+  background-color: #8abee3;
+  width: 100%;
+  color:white;
+
+}
+
+.bg-new{
+  background-color: #8abee3;
+}
+.resume-outer-section{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+resume-new-section{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 42px;
+  box-shadow: 10px 10px 31px 2px #1c1c1c;
+}
+.description{
+}
+
+
+/* Contact me Section*/
+
+.contact-me-part{
+  color:#b73333
+}
+
+.px-9{
+  padding-inline: 90px;
+}
+
+.flex-rows{
+  flex-direction:row;
+}
+/* Moblie view options*/
+
+@media all and (max-width:786px){
+  flox-direction: "column";
+
+}
+
 
 
 
