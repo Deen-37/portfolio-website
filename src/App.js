@@ -5,6 +5,9 @@ import Externship from './Externship.js';
 import Project from './Project.js';
 import Educ from './Educ.js'
 import Contact from './contact.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function App() {
   const [educ, seteduc] = useState(true);
@@ -22,18 +25,35 @@ function App() {
   return (
     <div className='app'>
       <div className="hero px-5 py-5">
-        <nav className=' d-flex flex-row justify-content-between nav'>
-          <span className='brand_name' >Selehadin Abebe</span>
-          <div className='nav_links d-flex flex-row' >
-            <span className=' mx-4 nav_members'> Home</span>
-            <span className=' mx-4 nav_members'>About Me</span>
-            <span className='mx-4 nav_members'>Skills</span>
-            <span className='mx-4 nav_members'>Projects</span>
-            <span className='nav_members'> Contact Me</span>
+        <nav className="navbar navbar-expand-lg bg-light sticky-top">
+          <div className="container-fluid">
+            <a className="navbar-brand brand_name" href="#">Selehadin Abebe</a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item mx-2"><a className="nav-link" href="#home">Home</a></li>
+                <li className="nav-item mx-2"><a className="nav-link" href="#about">About Me</a></li>
+                <li className="nav-item mx-2"><a className="nav-link" href="#skills">Skills</a></li>
+                <li className="nav-item mx-2"><a className="nav-link" href="#projects">Projects</a></li>
+                <li className="nav-item mx-2"><a className="nav-link" href="#contact">Contact Me</a></li>
+              </ul>
+            </div>
           </div>
         </nav>
+
       </div>
-      <div className= "row justify-content-center hero_2">
+      <div id= "home" className= "row justify-content-center hero_2">
         <div className= "text-side-left col-lg-5 col-md-6 col-sm-12">
           <div className = "personal d-flex flex-column">
             <span className ="I_text ">
@@ -54,52 +74,121 @@ function App() {
         </div>
       </div>
 
-      <div id="about" className="about-me-section aboutme-inside my-5">
-        <div className='d-flex flex-column'>
-          <span className='about-me-text'> About me</span>
-          <span className='why-text-sub'>Why Choose me?</span>
-          <div className='row justify-content-center shadow-lg my-5'>
-            <div className='col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-center'>
-              <lottie-player 
-                src="https://assets7.lottiefiles.com/packages/lf20_v1yudlrx.json" 
-                background="transparent" 
-                speed="1" 
-                style= {{width:"500px", height: "500px"}}
-                loop 
-                autoplay>
-              </lottie-player>
-            </div>
-            <div className='col-lg06 col-md-6 col-sm-12 py-5 d-flex flex-column'>
-              <span className='some-text-about-me'>
-                Full Stack Web Developer with hands-on experience in designing and building responsive, user-focused web applications. 
-                I specialize in creating scalable front-end interfaces and efficient back-end systems, with a strong emphasis on 
-                clean code, performance, and user experience.
-              </span>
+      <div id="skills" className="skills-section my-5">
+        <div className="text-center mb-4">
+          <span className="about-me-text">Technical Skills</span>
+          <span className="why-text-sub d-block">What I work with</span>
+        </div>
 
-              <span className='few-highlights mt-4 fw-bold'>Technical Summary:</span>
+        <div className="row justify-content-center text-center">
+          {/* Frontend */}
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <h6>🖥️ Frontend</h6>
+            <p>HTML • CSS • JavaScript • React • Angular • Bootstrap • Vite</p>
+          </div>
 
-              <ul className='few-list mt-2'>
-                <li><strong>Front-End:</strong> HTML, CSS, JavaScript, TypeScript, React, Angular, Bootstrap, Vite</li>
-                <li><strong>Back-End:</strong> Node.js, Express.js, Mulesoft</li>
-                <li><strong>Databases:</strong> MongoDB, MySQL, SQL Server</li>
-                
-                <li><strong>APIs & Integration:</strong> REST API design, Postman testing, JSON handling</li>
-                <li><strong>Tools & Platforms:</strong> Git, GitHub, Docker, VS Code, IntelliJ, Ollama</li>
-                <li><strong>Programming Languages:</strong> Python, Java, C++, SQL</li>
-                <li><strong>Additional Libraries:</strong> TextBlob, pandas (for NLP and data analysis)</li>
-              </ul>
+          {/* Backend */}
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <h6>⚙️ Backend</h6>
+            <p>Node.js • Express.js • Mulesoft</p>
+          </div>
 
-              <span className='few-highlights mt-4 fw-bold'>Key Strengths:</span>
-              <ul className='few-list mt-2'>
-                <li>Building full-stack web apps using MERN stack and modern frameworks</li>
-                <li>Designing responsive, user-friendly front-end layouts</li>
-                <li>Developing and testing RESTful APIs</li>
-                <li>Writing maintainable, modular, and optimized code</li>
-              </ul>
-            </div>
-          </div>  
+          {/* Databases */}
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <h6>🗄️ Databases</h6>
+            <p>MongoDB • MySQL • SQL Server</p>
+          </div>
+
+          {/* Programming Languages */}
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <h6>💻 Programming Languages</h6>
+            <p>Python • Java • C++ • SQL</p>
+          </div>
+
+          {/* Tools & Platforms */}
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <h6>🧰 Tools & Platforms</h6>
+            <p>Git • GitHub • Docker • VS Code • IntelliJ • Ollama</p>
+          </div>
+
+          {/* APIs & Integration */}
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <h6>🔗 APIs & Integration</h6>
+            <p>REST API • Postman • JSON</p>
+          </div>
+
+          {/* Libraries */}
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <h6>📚 Libraries</h6>
+            <p>TextBlob • pandas</p> 
+          </div>
         </div>
       </div>
+
+      <div id="projects" className="projects-section my-5">
+        <div className="text-center mb-4">
+          <span className="about-me-text">Projects</span>
+          <span className="why-text-sub d-block">Some of my recent work</span>
+        </div>
+
+        <div className="row justify-content-center">
+          {/* Project 1 - Deen Productive */}
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div className="project-card p-3 h-100">
+              <img src="/deen.png" alt="Deen Productive" className="img-fluid mb-3 rounded" />
+              <h5 className="project-title">Deen Productive</h5>
+              <p className="project-desc">
+                A 30-day productivity challenge website that helps users build consistent daily habits.
+              </p>
+              <p className="project-tech">
+                <strong>Tech:</strong> React • CSS • JavaScript
+              </p>
+              <div className="d-flex justify-content-center gap-3">
+                <a href="https://github.com/your-github/Deen_productive" 
+                  className="btn btn-outline-dark" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 2 - FAQ Chatbot */}
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div className="project-card p-3 h-100">
+              <img src="/faqchatbot.png" alt="FAQ Chatbot" className="img-fluid mb-3 rounded" />
+              <h5 className="project-title">FAQ Chatbot</h5>
+              <p className="project-desc">
+                An AI-powered chatbot that answers frequently asked questions using Ollama LLM.
+              </p>
+              <p className="project-tech">
+                <strong>Tech:</strong> Python • Regex • Ollama
+              </p>
+              <div className="d-flex justify-content-center gap-3">
+                <a href="https://github.com/deen-37/Deen_productive" 
+                  className="btn btn-outline-dark" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 3 - SalMart Fresh */}
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div className="project-card p-3 h-100">
+              <img src="/salmarket.png" alt="SalMart Fresh" className="img-fluid mb-3 rounded" />
+              <h5 className="project-title">SalMart Fresh</h5>
+              <p className="project-desc">
+                A modern grocery e-commerce website with clean layout, product listings and multimedia.
+              </p>
+              <p className="project-tech">
+                <strong>Tech:</strong> HTML • CSS • JavaScript
+              </p>
+              <div className="d-flex justify-content-center gap-3">
+                <a href="https://github.com/Selah-deen/web_project_salmartfresh" 
+                  className="btn btn-outline-dark" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* 
+
       <div className='resume-outer-section d-flex flex-column'>
         <span className= "about-me-text">Resume</span>
         <span className='why-text-sub'> My Detail</span>
@@ -156,17 +245,31 @@ function App() {
           
         </div>
       </div>
-      <div className='contact-me'>
-        <div className='relative-bg'>
-          <div className='contact-inner-part d-flex flex-column'>
-            <span className='about-me-text'>Contact me</span>
-            <span className='why-text-sub mb-5'> Let's Keep in touch</span>
-            <Contact/>
+      */}
+    <div>
+      <div id= "contact" className='contact-us my-5'>
+            <h6 className='about-me-text'>Contact me</h6>
+            <p className='why-text-sub mb-5'> Let's Keep in touch</p>
           </div>
+          <div>
+            <Contact/>
         </div>
-      </div>
-
+        <footer className='footer d-flex flex-row justify-content-center gap-4 py-4'>
+          <p className="name mb-0">@ Selehadin Abebe</p>
+          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="github">
+            <i className="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="linkedin">
+            <i className="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:selehadin.abe@email.com" className="email">
+            <i className="fa-solid fa-envelope"></i> Email
+          </a>
+      </footer>
     </div>
+
+
+  </div>
   );
 }
 
