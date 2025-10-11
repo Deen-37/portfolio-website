@@ -24,8 +24,8 @@ function App() {
   }
   return (
     <div className='app'>
-      <div className="hero px-5 py-5">
-        <nav className="navbar navbar-expand-lg bg-light sticky-top">
+      <div className="hero">
+        <nav className="navbar navbar-expand-lg sticky-top">
           <div className="container-fluid">
             <a className="navbar-brand brand_name" href="#">Selehadin Abebe</a>
             <button
@@ -51,7 +51,6 @@ function App() {
             </div>
           </div>
         </nav>
-
       </div>
       <div id= "home" className= "row justify-content-center hero_2">
         <div className= "text-side-left col-lg-5 col-md-6 col-sm-12">
@@ -59,8 +58,10 @@ function App() {
             <span className ="I_text ">
               Hello, I am <span className= "name">Selehadin Abebe</span>
             </span>
-            <span className='adjective py-2'>Enthusiastic Dev 😎</span>
-            <span className='overview'>passionate about building front and back-end operations </span>
+            <span className='adjective py-2'>💻 Passionate Coder</span>
+            <span className='overview'> a computer science student focused on 
+               front-end and back-end development, always eager to learn and create.
+            </span>
             <div className= "btns d-flex flex-row justify-content-center mt-5">
               <button className='btn_1'> Hire Me </button>
               <button className='btn_2'> Resume </button>
