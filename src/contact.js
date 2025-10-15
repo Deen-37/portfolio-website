@@ -5,19 +5,28 @@ export default function (){
     const[name, setname] = useState("")
     const[email, setemail] = useState("")
     const[message,setmessage]=useState("")
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ name, email, message });
+    setname("");
+    setemail("");
+    setmessage("");
+  };
     return (<>
     <div>
-        <div className="contact-me-card row">
+        <div className="row both mx-5 my-5 justify-content-center">
             <div className="col-lg-6 col-md-5 col-sm-12 left-contact">
-                <span className="get-in-touch mx-4 my-5"> Get in touch</span>
-                <div className='py-5 d-flex justify-content-center'>
-                    <div className="py-5 d-flex justify-content-center">
+                <div className='px-4 d-flex justify-content-center'>
+                    <div className="d-flex flex-column justify-content-center">
+                        <h2 className="pt-5 contact-title">Get in Touch</h2>
+                        <p className="contact-subtitle">I'd love to hear from you. Let’s connect!</p>
+                    
                         <lottie-player
                        
                          src="https://assets10.lottiefiles.com/packages/lf20_3ktmthuy.json"
-                        background="transparent"
+                        background= "transparent"
                         speed="1"
-                        style={{ width: "300px", height: "300px" }}
+                        style={{ width: "100%", height: "40%" }}
                         Loop
                         autoplay
                         ></lottie-player>
@@ -25,23 +34,24 @@ export default function (){
                 </div>
             </div>
             <div className="col-lg-6 col-md-5 col-sm-12">
-                    <div className='d-flex flex-column card-contact-right'>
-                        <div className="input-group my-3 d-flex flex-column">
-                            <label>Name </label>
+                    <div className='px-4 pt-5 d-flex flex-column card-contact-right'>
+                        <form on onSubmit={handleSubmit}>
+                            <div className="input-group my-3 d-flex flex-column">
+                            <label className="label">Name </label>
                             <input 
                             value = {name}
                             onChange={(e) => {setname(e.target.value)}}
                             type='text' placeholder="Enter Your Name" className="input-groups"/>
                         </div>
                         <div className="input-group my-3 d-flex flex-column">
-                            <label>Email </label>
+                            <label className="label">Email </label>
                             <input 
                             value = {email}
                             onChange={(e) => {setemail(e.target.value)}}
-                            type='text' placeholder="Enter Your Email" className="input-groups"/>
+                            type='email' placeholder="Enter Your Email" className="input-groups"/>
                         </div>
                         <div className="input-group my-3 d-flex flex-column ">
-                            <label>Message </label>
+                            <label className="label">Message </label>
                             <input 
                             value = {message}
                             onChange={(e) => {setmessage(e.target.value)}}
@@ -50,8 +60,9 @@ export default function (){
                         <div className="input-group my-3 d-flex flex-column">
                             <button className="btn btn-success">Submit</button>
                         </div>
+                        </form>   
                     </div>
-                </div>
+            </div>
         </div>
     </div>
     </>

@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Externship from './Externship.js';
 import Project from './Project.js';
@@ -9,7 +9,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
+
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';   // ✅ must import the CSS
+import './App.css';
+
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      offset: 100,
+      once: true,
+      easing: 'ease-out',
+    });
+  }
+)
   const [educ, seteduc] = useState(true);
   const[project, setproject] = useState(false);
   const[externship, setexternship] = useState(false);
@@ -53,7 +68,7 @@ function App() {
         </nav>
       </div>
       <div id= "home" className= "row justify-content-center hero_2">
-        <div className= "text-side-left col-lg-5 col-md-6 col-sm-12">
+        <div data-aos= "slide-right" className= " text-side-left col-lg-5 col-md-6 col-sm-12">
           <div className = "personal d-flex flex-column">
             <span className ="I_text ">
               Hello, I am <span className= "name">Selehadin Abebe</span>
@@ -68,14 +83,14 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='picture col-lg-5 col-md-6 col-sm-12'>
+        <div  data-aos= "slide-left" className='picture col-lg-5 col-md-6 col-sm-12'>
           <div className='d-flex justify-content-center custom-div-outer-img'>
-               <img className='img-fluid pic' alt = "heroimage" src ='/image.png'></img>
+               <img className='img-fluid pic py-5' alt = "heroimage" src ='/images/hero_image.jpg'></img>
           </div>
         </div>
       </div>
 
-      <div id="skills" className="skills-section my-5">
+      <div data-aos= "fade-up" id="skills" className="skills-section my-5">
         <div className="text-center mb-4">
           <span className="about-me-text">Technical Skills</span>
           <span className="why-text-sub d-block">What I work with</span>
@@ -126,7 +141,7 @@ function App() {
         </div>
       </div>
 
-      <div id="projects" className="projects-section my-5">
+      <div data-aos= "zoom-in" id="projects" className="projects-section my-5">
         <div className="text-center mb-4">
           <span className="about-me-text">Projects</span>
           <span className="why-text-sub d-block">Some of my recent work</span>
@@ -171,8 +186,8 @@ function App() {
 
           {/* Project 3 - SalMart Fresh */}
           <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
-            <div className="project-card p-3 h-100">
-              <img src="/salmarket.png" alt="SalMart Fresh" className="img-fluid mb-3 rounded" />
+            <div className="project-card p-3">
+              <img src="/image2.png" alt="SalMart Fresh" className="img-fluid mb-3 rounded" />
               <h5 className="project-title">SalMart Fresh</h5>
               <p className="project-desc">
                 A modern grocery e-commerce website with clean layout, product listings and multimedia.
@@ -247,27 +262,24 @@ function App() {
         </div>
       </div>
       */}
-    <div>
       <div id= "contact" className='contact-us my-5'>
-            <h6 className='about-me-text'>Contact me</h6>
-            <p className='why-text-sub mb-5'> Let's Keep in touch</p>
-          </div>
-          <div>
-            <Contact/>
-        </div>
-        <footer className='footer d-flex flex-row justify-content-center gap-4 py-4'>
-          <p className="name mb-0">@ Selehadin Abebe</p>
-          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="github">
-            <i className="fa-brands fa-github"></i> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="linkedin">
-            <i className="fa-brands fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="mailto:selehadin.abe@email.com" className="email">
-            <i className="fa-solid fa-envelope"></i> Email
-          </a>
+          <h6 className='about-me-text'>Contact me</h6>
+          <p className='why-text-sub mb-5'> Let's Keep in touch</p>
+          <Contact/>
+      </div>
+      <footer className='footer d-flex flex-row justify-content-center gap-4 py-4'>
+        <p className="name mb-0">@ Selehadin Abebe</p>
+        <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="github">
+          <i className="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="linkedin">
+          <i className="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:selehadin.abe@email.com" className="email">
+          <i className="fa-solid fa-envelope"></i> Email
+        </a>
       </footer>
-    </div>
+    
 
 
   </div>

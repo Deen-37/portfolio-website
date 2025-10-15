@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&display=swap');
 
 .app{
-  background-color: white;
+  background: linear-gradient(180deg,#82b1e0, rgb(229, 232, 217),#85aed7, white);
+
 }
 .hero {
   /* background-color: #4b92da;     soft light background */
-  background: linear-gradient(to bottom,#3e88d3,#85aed7);
+  /* background: linear-gradient(to bottom,#3e88d3,#85aed7); */
+  animation: color 12s ease-in-out infinite;
 }
 .brand_name{
   color:white;
@@ -20,8 +22,11 @@
   color: rgb(19, 1, 1);
   padding-bottom: 2rem;
 }
-.nav-link:hover{
-  background-color: #539ee9;   /* hover highlight */
+.navbar-nav:hover .nav-link:hover{
+  background-color: #3e88d3;
+  padding-bottom: 1rem;
+  color: white;
+  border-radius: 20%;
 }
 .navbar-toggler {
   border: none;
@@ -35,7 +40,7 @@
 
 
 .hero_2 {
-  background: linear-gradient(to bottom, #85aed7, white); /* soft background */
+  /* background: linear-gradient(to bottom, #85aed7, white); soft background */
 }
 
 .I_text {
@@ -61,6 +66,7 @@
 
 .adjective:hover {
   transform: translateY(-3px);
+  
 }
 
 .overview {
@@ -102,18 +108,17 @@
 }
 
 .custom-div-outer-img{
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
+  border-radius: 2%;
+  padding:1%;
+  width: 60%;
   align-items: center;
   margin-left: 100px;
 
 }
-
 /*Skill Section */
 
 .skills-section {
-  background: linear-gradient(to top, #85aed7, white);
+  /* background: linear-gradient(to top, #85aed7, white); */
   padding: 60px 0;
 }
 
@@ -152,17 +157,20 @@
   margin:1%;
 }
 
-.skills-section .col-lg-3:hover {
-  transform: translateY(-5px);
+.skills-section .col-lg-3:hover{
+  transform: translateY(-30px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: linear-gradient(180deg,#82b1e0);
+  color: white;
 }
 
 /* Project Section*/
 
+
 .projects-section {
-  background: linear-gradient(to top, #85aed7, white);
+  /* background: linear-gradient(to top, #85aed7, white); */
   padding: 60px 0;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 .projects-section .about-me-text {
@@ -181,8 +189,8 @@
 .project-card {
   background-color: #f8f9fa;
   border-radius: 35px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 2.5rem;
   height: 100%;
 }
 
@@ -191,7 +199,7 @@
 .project-card:hover {
   transform: translateY(-30px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(to top, #b0cce7, white);
+  background: linear-gradient(#b0cce7);
 
 }
 
@@ -213,6 +221,7 @@
 }
 
 .project-card img {
+  height: 300px;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
@@ -221,16 +230,20 @@
   transform: scale(1.03);
 }
 
+
+/* Contact me*/
+
 .contact-us {
-  background-color: #f8f9fa;
-  padding: 60px 0;
   text-align: center;
+  /* background: linear-gradient(to top, white, #b0cce7); */
+  margin-bottom: 40px;
 }
+
 
 .contact-us .about-me-text {
   font-size: 2rem;
   font-weight: 600;
-  color: #333;
+  color: #007bff;
 }
 
 .contact-us .why-text-sub {
@@ -238,31 +251,45 @@
   color: #555;
   margin-bottom: 30px;
 }
+.contact{
+  color:linear-gradient(to top, #b0cce7, white);
+}
+
+
+.both{
+  background-color:white;
+  border-radius: 2%;
+  margin-left: 4rem;
+  border-color: white;
+  border-width: 1rem;
+}
 
 /* Contact form box */
 .card-contact-right {
   background-color: white;
-  padding: 25px;
+  margin: 15%;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-.card-contact-right label {
-  font-weight: 500;
-  color: #333;
+.label {
+  font-weight: 700;
+  font-size: 150%;
+  color: rgb(7, 7, 7);
   margin-bottom: 5px;
+  margin-right: 0%;
+  align-self: flex-start;
+
 }
 
 .input-groups {
-  border: 1px solid #ccc;
   padding: 10px;
-  border-radius: 5px;
-  outline: none;
   transition: border-color 0.3s ease;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .input-groups:focus {
-  border-color: #007bff;
+  border-color: #e5e6e8;
 }
 
 /* Submit button */
@@ -275,7 +302,7 @@
 }
 
 .btn-success:hover {
-  background-color: #0056b3;
+  color: #146fb9;
 }
 
 
