@@ -262,7 +262,7 @@ function App() {
         </div>
       </div>
       */}
-      <div id= "contact" className='contact-us my-5'>
+      <div id= "contact" className='contact-us'>
           <h6 className='about-me-text'>Contact me</h6>
           <p className='why-text-sub mb-5'> Let's Keep in touch</p>
           <Contact/>

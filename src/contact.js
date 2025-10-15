@@ -14,7 +14,7 @@ export default function (){
   };
     return (<>
     <div>
-        <div className="row both mx-5 my-5 justify-content-center">
+        <div className="d-flex flex-row both mx-5 my-5 justify-content-center">
             <div className="col-lg-6 col-md-5 col-sm-12 left-contact">
                 <div className='px-4 d-flex justify-content-center'>
                     <div className="d-flex flex-column justify-content-center">
