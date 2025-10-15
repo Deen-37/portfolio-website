@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+/*import React,{useState} from "react";
 import "./contact.css";
 
 export default function (){
@@ -14,7 +14,7 @@ export default function (){
   };
     return (<>
     <div>
-        <div className="d-flex flex-row both mx-5 my-5 justify-content-center">
+        <div className="row both mx-5 my-5 justify-content-center">
             <div className="col-lg-6 col-md-5 col-sm-12 left-contact">
                 <div className='px-4 d-flex justify-content-center'>
                     <div className="d-flex flex-column justify-content-center">
@@ -67,4 +67,92 @@ export default function (){
     </div>
     </>
     );
+}
+    */
+
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./contact.css";
+
+export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ name, email, message });
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
+  return (
+    <section className="contact-section pb-5">
+      <div className="container shadow-lg p-5 rounded bg-white">
+        <div className="row align-items-center">
+          {/* Left Text & Animation */}
+          <div className="col-lg-6 col-md-12 mb-4 mb-lg-0 text-center">
+            <h2 className="text-primary fw-bold mb-3">Let's Connect</h2>
+            <p className="text-muted mb-4">
+              I’d love to hear from you. Whether it's opportunities, a project, a question, or just a hello.
+            </p>
+            <lottie-player
+              src="https://assets10.lottiefiles.com/packages/lf20_3ktmthuy.json"
+              background="transparent"
+              speed="1"
+              style={{ width: "100%", height: "300px" }}
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+
+          {/* Right Form */}
+          <div className="col-lg-6 col-md-12">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-3 text-start">
+                <label className="form-label fw-semibold">Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="mb-3 text-start">
+                <label className="form-label fw-semibold">Email</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="mb-3 text-start">
+                <label className="form-label fw-semibold">Message</label>
+                <textarea
+                  className="form-control"
+                  rows="4"
+                  placeholder="Write your message..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" className="btn btn-primary w-100">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

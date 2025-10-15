@@ -69,7 +69,7 @@ function App() {
       </div>
       <div id= "home" className= "row justify-content-center hero_2">
         <div data-aos= "slide-right" className= " text-side-left col-lg-5 col-md-6 col-sm-12">
-          <div className = "personal d-flex flex-column">
+          <div className = "personal d-flex flex-column mt-5 pt-5">
             <span className ="I_text ">
               Hello, I am <span className= "name">Selehadin Abebe</span>
             </span>
@@ -90,7 +90,7 @@ function App() {
         </div>
       </div>
 
-      <div data-aos= "fade-up" id="skills" className="skills-section my-5">
+      <div data-aos= "slide-up" id="skills" className="skills-section my-5">
         <div className="text-center mb-4">
           <span className="about-me-text">Technical Skills</span>
           <span className="why-text-sub d-block">What I work with</span>
@@ -149,9 +149,9 @@ function App() {
 
         <div className="row justify-content-center">
           {/* Project 1 - Deen Productive */}
-          <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
-            <div className="project-card p-3 h-100">
-              <img src="/deen.png" alt="Deen Productive" className="img-fluid mb-3 rounded" />
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div className="project-card p-3">
+              <img src="images/deen_productive.png" alt="Deen Productive" className="img-fluid w-100 mb-3 rounded" />
               <h5 className="project-title">Deen Productive</h5>
               <p className="project-desc">
                 A 30-day productivity challenge website that helps users build consistent daily habits.
@@ -160,16 +160,16 @@ function App() {
                 <strong>Tech:</strong> React • CSS • JavaScript
               </p>
               <div className="d-flex justify-content-center gap-3">
-                <a href="https://github.com/your-github/Deen_productive" 
+                <a href="https://github.com/Deen-37/Deen_productive" 
                   className="btn btn-outline-dark" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </div>
           </div>
 
           {/* Project 2 - FAQ Chatbot */}
-          <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
-            <div className="project-card p-3 h-100">
-              <img src="/faqchatbot.png" alt="FAQ Chatbot" className="img-fluid mb-3 rounded" />
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div className="project-card p-3">
+              <img src="images/ai_chatbot.png" alt="FAQ Chatbot" className="img-fluid mb-3 rounded" />
               <h5 className="project-title">FAQ Chatbot</h5>
               <p className="project-desc">
                 An AI-powered chatbot that answers frequently asked questions using Ollama LLM.
@@ -178,16 +178,16 @@ function App() {
                 <strong>Tech:</strong> Python • Regex • Ollama
               </p>
               <div className="d-flex justify-content-center gap-3">
-                <a href="https://github.com/deen-37/Deen_productive" 
+                <a href="https://github.com/Deen-37/FAQ-Chatbot" 
                   className="btn btn-outline-dark" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </div>
           </div>
 
           {/* Project 3 - SalMart Fresh */}
-          <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
             <div className="project-card p-3">
-              <img src="/image2.png" alt="SalMart Fresh" className="img-fluid mb-3 rounded" />
+              <img src="images/salmart.png" alt="SalMart Fresh" className="img-fluid mb-3 rounded" />
               <h5 className="project-title">SalMart Fresh</h5>
               <p className="project-desc">
                 A modern grocery e-commerce website with clean layout, product listings and multimedia.
@@ -195,7 +195,7 @@ function App() {
               <p className="project-tech">
                 <strong>Tech:</strong> HTML • CSS • JavaScript
               </p>
-              <div className="d-flex justify-content-center gap-3">
+              <div className="d-flex justify-content-center">
                 <a href="https://github.com/Selah-deen/web_project_salmartfresh" 
                   className="btn btn-outline-dark" target="_blank" rel="noreferrer">GitHub</a>
               </div>
@@ -269,10 +269,10 @@ function App() {
       </div>
       <footer className='footer d-flex flex-row justify-content-center gap-4 py-4'>
         <p className="name mb-0">@ Selehadin Abebe</p>
-        <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="github">
+        <a href="https://github.com/deen-37" target="_blank" rel="noreferrer" className="github">
           <i className="fa-brands fa-github"></i> GitHub
         </a>
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="linkedin">
+        <a href="https://www.linkedin.com/in/selehadin-abebe-aa9689324/" target="_blank" rel="noreferrer" className="linkedin">
           <i className="fa-brands fa-linkedin"></i> LinkedIn
         </a>
         <a href="mailto:selehadin.abe@email.com" className="email">

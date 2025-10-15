@@ -19,7 +19,7 @@
 .navbar-nav .nav-link {
   font-weight: 500;
   transition: color 0.3s ease;
-  color: rgb(19, 1, 1);
+  color: rgb(244, 244, 244);
   padding-bottom: 2rem;
 }
 .navbar-nav:hover .nav-link:hover{
@@ -191,7 +191,7 @@
   border-radius: 35px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 2.5rem;
-  height: 100%;
+  height: 88%;
 }
 
 
@@ -230,6 +230,10 @@
   transform: scale(1.03);
 }
 
+.img-fluid{
+  height: 50%;
+}
+
 
 /* Contact me*/
 
@@ -262,8 +266,8 @@
   margin-left: 4rem;
   border-color: white;
   border-width: 1rem;
+  max-width: 60%;
 }
-
 /* Contact form box */
 .card-contact-right {
   background-color: white;
@@ -308,41 +312,58 @@
 
 
 
+/*.contact-section {
+  background: linear-gradient(to bottom, #b7d4f0, #ffffff);
+}
+*/
+/*
+.form-control {
+  border: 2px solid #ccc;
+  transition: border 0.3s ease;
+}
+*/
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #0b80cf;
+}
+
+/*Footer */
+
+.footer {
+  padding: 2rem 0;   /* Increase top & bottom space */
+}
+.footer {
+  padding: 2rem 0;   /* Increase top & bottom space */
+}
+.footer p,
+.footer a {
+  font-size: 2rem;
+}
+
+.footer i {
+  font-size: 2rem;
+}
 
 
+.footer{
+  background-color: rgb(247, 250, 251);
+}
+.footer-element{
+  color: white;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
