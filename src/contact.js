@@ -143,7 +143,7 @@ export default function Contact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
-                ></textarea>
+                ></ textarea>
               </div>
 
               <button type="submit" className="btn btn-primary w-100">
