@@ -58,7 +58,6 @@ function App() {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item mx-2"><a className="nav-link" href="#home">Home</a></li>
-                <li className="nav-item mx-2"><a className="nav-link" href="#about">About Me</a></li>
                 <li className="nav-item mx-2"><a className="nav-link" href="#skills">Skills</a></li>
                 <li className="nav-item mx-2"><a className="nav-link" href="#projects">Projects</a></li>
                 <li className="nav-item mx-2"><a className="nav-link" href="#contact">Contact Me</a></li>
@@ -78,8 +77,8 @@ function App() {
                front-end and back-end development, always eager to learn and create.
             </span>
             <div className= "btns d-flex flex-row justify-content-center mt-5">
-              <button className='btn_1'> Hire Me </button>
-              <button className='btn_2'> Resume </button>
+              <a href="#contact" className='btn_1'> Hire Me </a>
+              <a href= "/resume/resume.pdf" className='btn_2'>Get Resume</a>
             </div>
           </div>
         </div>
