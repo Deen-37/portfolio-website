@@ -79,13 +79,32 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log({ name, email, message });
+  //   setName("");
+  //   setEmail("");
+  //   setMessage("");
+  // };
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ name, email, message });
-    setName("");
-    setEmail("");
-    setMessage("");
+
+    const response = await fetch("https://formspree.io/f/xovkyrvg", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    if (response.ok) {
+      alert("✅ Message sent successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } else {
+      alert("❌ Something went wrong. Please try again.");
+    }
   };
+
 
   return (
     <section className="contact-section pb-5">
