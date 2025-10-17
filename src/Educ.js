@@ -1,4 +1,4 @@
-import react from 'react';
+// import react from 'react';
 import "./educ.css";
 export default function
 Education () {

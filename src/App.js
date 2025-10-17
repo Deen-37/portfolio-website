@@ -1,13 +1,13 @@
 
 import { useState, useEffect } from 'react';
 import './App.css';
-import Externship from './Externship.js';
-import Project from './Project.js';
-import Educ from './Educ.js'
+// import Externship from './Externship.js';
+// import Project from './Project.js';
+// import Educ from './Educ.js'
 import Contact from './contact.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Navbar, Nav, Container } from 'react-bootstrap';
+// import { Navbar, Nav, Container } from 'react-bootstrap';
 
 
 
@@ -42,7 +42,7 @@ function App() {
       <div className="hero">
         <nav className="navbar navbar-expand-lg sticky-top">
           <div className="container-fluid">
-            <a className="navbar-brand brand_name" href="#">Selehadin Abebe</a>
+            <a className="navbar-brand brand_name" href="#home">Selehadin Abebe</a>
             <button
               className="navbar-toggler"
               type="button"
