@@ -1,13 +1,8 @@
 
-import { useState, useEffect } from 'react';
+import {useEffect } from 'react';
 import './App.css';
-// import Externship from './Externship.js';
-// import Project from './Project.js';
-// import Educ from './Educ.js'
 import Contact from './contact.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// import { Navbar, Nav, Container } from 'react-bootstrap';
 
 
 
@@ -24,19 +19,7 @@ function App() {
       easing: 'ease-out',
     });
   }
-)
-  const [educ, seteduc] = useState(true);
-  const[project, setproject] = useState(false);
-  const[externship, setexternship] = useState(false);
-  function SetAllFalse(){
-    seteduc(false)
-    setproject(false)
-    setexternship(false)
-  }
-  function changeState(function1, state1){
-    SetAllFalse();
-    function1(state1);
-  }
+)  
   return (
     <div className='app'>
       <div className="hero">
@@ -89,7 +72,7 @@ function App() {
         </div>
       </div>
 
-      <div data-aos= "slide-up" id="skills" className="skills-section my-5">
+      <div data-aos= "zoom-in" id="skills" className="skills-section my-5">
         <div className="text-center mb-4">
           <span className="about-me-text">Technical Skills</span>
           <span className="why-text-sub d-block">What I work with</span>
@@ -97,45 +80,59 @@ function App() {
 
         <div className="row justify-content-center text-center">
           {/* Frontend */}
+          
           <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <h6>🖥️ Frontend</h6>
-            <p>HTML • CSS • JavaScript • React • Angular • Bootstrap • Vite</p>
+            <div className='skill-card'>
+              <h6>🖥️ Frontend</h6>
+              <p>HTML • CSS • JavaScript • React • Angular • Bootstrap • Vite</p>
+            </div>
           </div>
 
           {/* Backend */}
           <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <h6>⚙️ Backend</h6>
-            <p>Node.js • Express.js • Mulesoft</p>
+            <div className='skill-card'>
+              <h6>⚙️ Backend</h6>
+              <p>Node.js • Express.js • Mulesoft</p>
+            </div>
           </div>
 
           {/* Databases */}
           <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <h6>🗄️ Databases</h6>
-            <p>MongoDB • MySQL • SQL Server</p>
+            <div className='skill-card'>
+              <h6>🗄️ Databases</h6>
+              <p>MongoDB • MySQL • SQL Server</p>
+            </div>
           </div>
-
           {/* Programming Languages */}
           <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <h6>💻 Programming Languages</h6>
-            <p>Python • Java • C++ • SQL</p>
-          </div>
+            <div className='skill-card'>
+              <h6>💻 Programming Languages</h6>
+              <p>Python • Java • C++ • SQL</p>
+            </div>
+            </div>
 
           {/* Tools & Platforms */}
           <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <h6>🧰 Tools & Platforms</h6>
-            <p>Git • GitHub • Docker • VS Code • IntelliJ • Ollama</p>
+            <div className='skill-card'>
+              <h6>🧰 Tools & Platforms</h6>
+              <p>Git • GitHub • Docker • VS Code • IntelliJ • Ollama</p>
+            </div>
           </div>
 
           {/* APIs & Integration */}
           <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <h6>🔗 APIs & Integration</h6>
-            <p>REST API • Postman • JSON</p>
+            <div className='skill-card'>
+              <h6>🔗 APIs & Integration</h6>
+              <p>REST API • Postman • JSON</p>
+            </div>
           </div>
 
           {/* Libraries */}
           <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <h6>📚 Libraries</h6>
-            <p>TextBlob • pandas</p> 
+            <div className='skill-card'>
+              <h6>📚 Libraries</h6>
+              <p>TextBlob • pandas</p> 
+            </div>
           </div>
         </div>
       </div>
@@ -261,22 +258,32 @@ function App() {
         </div>
       </div>
       */}
-      <div id= "contact" className='contact-us'>
+      <div data-aos= "zoom-in" id= "contact" className='contact-us'>
           <h6 className='about-me-text'>Contact me</h6>
           <p className='why-text-sub mb-5'> Let's Keep in touch</p>
           <Contact/>
       </div>
-      <footer className='footer d-flex flex-row justify-content-center gap-4 py-4'>
-        <p className="name mb-0">@ Selehadin Abebe</p>
-        <a href="https://github.com/deen-37" target="_blank" rel="noreferrer" className="github">
-          <i className="fa-brands fa-github"></i> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/selehadin-abebe-aa9689324/" target="_blank" rel="noreferrer" className="linkedin">
-          <i className="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="mailto:selehadin.abe@email.com" className="email">
-          <i className="fa-solid fa-envelope"></i> Email
-        </a>
+      <footer className="footer">
+        <div className="row justify-content-center text-center">
+          <div className="col-lg-auto col-md-auto col-sm-12 mb-2">
+            <p className="name mb-0">@ Selehadin Abebe</p>
+          </div>
+          <div className="col-lg-auto col-md-auto col-sm-12 mb-2">
+            <a href="https://github.com/deen-37" target="_blank" rel="noreferrer" className="github">
+              <i className="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+          <div className="col-lg-auto col-md-auto col-sm-12 mb-2">
+            <a href="https://www.linkedin.com/in/selehadin-abebe-aa9689324/" target="_blank" rel="noreferrer" className="linkedin">
+              <i className="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+          <div className="col-lg-auto col-md-auto col-sm-12 mb-2">
+            <a href="mailto:selehadin.abe@email.com" className="email">
+              <i className="fa-solid fa-envelope"></i> Email
+            </a>
+          </div>
+        </div>
       </footer>
     
 
